@@ -1,0 +1,59 @@
+/* boje: #e5e5e5, #e03131,#FF8787, #FA5252   */
+
+/* MANIPULACIJA VIEWPORTOVA */
+.pocetniEkran {
+  /* display: none !important; */
+}
+.pogodiGlavniGrad {
+  /* display: none !important; */
+}
+
+.pocetniEkran {
+  grid-template-columns: 1fr;
+  grid-template-rows: 50vh 50vh;
+  /* visibility: hidden; */
+}
+.pi {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: all 0.3s;
+}
+.pocetak-ikona {
+  height: 1.6rem;
+  width: 20%;
+  transition: all 0.3s;
+}
+.pi:hover {
+  /* background-color: #e031318e; */
+}
+.pi:hover .pocetak--igre {
+  transform: scale(1.05) translateX(0.5rem);
+}
+.pi:hover .pocetak-ikona {
+  transform: scale(1.2);
+}
+.kutija--pocetak--igre {
+  justify-self: center;
+  align-self: flex-end;
+  margin-bottom: 20vh;
+  display: flex;
+  flex-direction: column;
+  height: 3.2rem;
+  width: 16rem;
+  overflow: hidden;
+  background-color: #fa5252;
+  transition: height 0.5s, padding 0.5s, transform 0.5s;
+  border-radius: 11px;
+}
+.pocetak--igre {
+  border: 0;
+  font-size: 1rem;
+  padding: 1rem 0;
+  cursor: pointer;
+  width: 80%;
+  background-color: transparent;
+  transition: all 0.3s;
+  text-align: start;
+}
