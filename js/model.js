@@ -237,8 +237,6 @@ export const zavrsniEkran = function () {
   tacniiSat[0].textContent = `${brojTacnih()}/10`;
 
   tacniiSat[1].textContent = produzenFormat.split("").splice(1, 4).join("");
-  // tacniiSat[1].textContent = document
-  // .querySelector(".igt").textContent.split("").splice(1, 4).join("");
   resetIgre();
   return;
 };

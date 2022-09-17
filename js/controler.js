@@ -71,6 +71,7 @@ import {
   zavrsiDugmeEv,
   vratiNazadEvListener,
   igrajPonovoEvListener,
+  igrajPonovoXListener,
 } from "./views/defaultView.js";
 
 const naslov = document.querySelector("h1");
@@ -123,6 +124,7 @@ export const render = function () {
 };
 export let j = 0;
 const oneTapSliciceCB = function (e) {
+  gradoviIgraCB;
   j = Number(e.target.classList[1] - 1);
   updateIndex();
   render();
@@ -140,10 +142,12 @@ pocniIgruEvListener(pocniIgruCB);
 nazadPocetniEvListener(nazadCB);
 
 const gradoviIgraCB = function () {
+  document.querySelector(".pogodiZastavu").style.display = "none";
   uzimanjeDrzava();
   isprazniDrzave();
   pocetniEkran.style.display = "none";
   zavrsni.style.display = "none";
+  igrajPonovoXListener(gradoviIgraCB);
 };
 
 export const vratiNazadCB = function () {
@@ -155,11 +159,19 @@ export const vratiNazadCB = function () {
 
 vratiNazadEvListener(vratiNazadCB, nazadCB);
 
+let vrijemeZastave = false;
+let vrijemeGradovi = false;
+
 const updateVremena = function () {
-  if (mod === 1)
+  if (mod === 1) {
+    if (vrijemeZastave) return;
     setInterval(() => (vrijemeEl.textContent = produzenFormat), 1000);
-  if (mod === 2)
+    vrijemeZastave = true;
+  } else if (mod === 2) {
+    if (vrijemeGradovi) return;
     setInterval(() => (vrijemeZastaveEl.textContent = produzenFormat), 1000);
+    vrijemeGradovi = true;
+  }
 };
 export async function uzimanjeDrzava() {
   modIgre(1);
@@ -197,16 +209,20 @@ function prikaziKanvasZastave() {
 }
 
 const zastaveIgraCB = function () {
+  document.querySelector(".pogodiGlavniGrad").style.display = "none";
   uzimanjeZastava();
   isprazniDrzave();
   pocetniEkran.style.display = "none";
   zavrsni.style.display = "none";
+  igrajPonovoXListener(zastaveIgraCB);
 };
 
 pocniZastaveEvListener(zastaveIgraCB);
 
 //Reset
+
 export const resetIgre = function () {
+  console.log();
   if (mod === 1) {
     igrajPonovoEvListener(gradoviIgraCB);
   }
@@ -228,7 +244,7 @@ const unesenaDrzavaCB = function (Event) {
   provjera(unesenaDrzava);
 };
 export const brisanjePolja = function () {
-  unesenaDrzava.disabled = false;
+  // unesenaDrzava.disabled = false;
   unesenaDrzava.focus();
   unesenaDrzava.value = "";
   unesenaDrzava.textContent = "";
@@ -237,10 +253,14 @@ export const brisanjePolja = function () {
 const dodajEv = function () {
   potvrdiImeEvListener(potvrdiImeCB);
   obrisiImeEvListener(obrisiImeCB);
+  console.log(unesenaDrzava);
+  unesenaDrzava.disabled = false;
 };
 const ukloniEv = function () {
   potvrdiImeEvSklanjanje(potvrdiImeCB);
   obrisiImeEvSklanjanje(obrisiImeCB);
+  console.log(unesenaDrzava);
+  unesenaDrzava.disabled = true;
 };
 
 export const lijevoZastaveCB = function () {
