@@ -1,0 +1,52 @@
+.pocetniEkran {
+  grid-template-rows: 50vh 50vh;
+  grid-template-columns: 1fr;
+}
+
+.pi {
+  cursor: pointer;
+  height: 100%;
+  align-items: center;
+  transition: all .3s;
+  display: flex;
+}
+
+.pocetak-ikona {
+  height: 1.6rem;
+  width: 20%;
+  transition: all .3s;
+}
+
+.pi:hover .pocetak--igre {
+  transform: scale(1.05)translateX(.5rem);
+}
+
+.pi:hover .pocetak-ikona {
+  transform: scale(1.2);
+}
+
+.kutija--pocetak--igre {
+  height: 3.2rem;
+  width: 16rem;
+  background-color: #fa5252;
+  border-radius: 11px;
+  flex-direction: column;
+  place-self: flex-end center;
+  margin-bottom: 20vh;
+  transition: height .5s, padding .5s, transform .5s;
+  display: flex;
+  overflow: hidden;
+}
+
+.pocetak--igre {
+  cursor: pointer;
+  width: 80%;
+  text-align: start;
+  background-color: #0000;
+  border: 0;
+  padding: 1rem 0;
+  font-size: 1rem;
+  transition: all .3s;
+}
+
+/*# sourceMappingURL=index.bd2bff60.css.map */

@@ -1,0 +1,102 @@
+.zavrsni-ekran {
+  width: 24rem;
+  background-color: #fa5252;
+  border-radius: 11px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 50% 50%;
+  align-self: center;
+  justify-items: center;
+  row-gap: 1rem;
+  padding-bottom: 1rem;
+  display: none;
+}
+
+.zavrsni-ekran h2 {
+  grid-area: 1 / 1 / auto / -1;
+  align-self: center;
+}
+
+.nazad-na-pocetni {
+  grid-area: 3 / 1;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+}
+
+.nazad-na-pocetni:hover {
+  cursor: pointer;
+}
+
+.nazad-na-pocetni:hover .zav-nazad {
+  transform: translateX(-.4rem);
+}
+
+.nazad-na-pocetni h4 {
+  margin-left: .6rem;
+}
+
+.tacni-odgovori {
+  width: 100%;
+  grid-column: 1;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: 1.4rem;
+  display: flex;
+}
+
+.zav-vrijeme {
+  width: 40%;
+  grid-area: 2 / 2;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  font-size: 1.4rem;
+  display: flex;
+}
+
+.cta ion-icon {
+  padding-right: .5rem;
+}
+
+.tacni-odgovori h4 {
+  margin-left: .4rem;
+}
+
+.vrijeme h4 {
+  margin-left: .8rem;
+  font-size: 1.4rem;
+}
+
+.ikona {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.dugme-ponovi-igru {
+  height: 1.6rem;
+  width: 1.6rem;
+  transition: all .3s;
+}
+
+.ponovi-igru {
+  grid-area: 3 / 2;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ponovi-igru:hover {
+  cursor: pointer;
+}
+
+.ponovi-igru:hover .dugme-ponovi-igru {
+  transform: rotate(45deg);
+}
+
+.ponovi-igru h4 {
+  margin-left: .6rem;
+}
+
+/*# sourceMappingURL=index.ace0d5d1.css.map */

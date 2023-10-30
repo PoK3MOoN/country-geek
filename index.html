@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/basics.css"></link>
+    <link rel="stylesheet" href="./css/pocetna.css"></link>
+    <link rel="stylesheet" href="./css/pocetnaRes.css"></link>
+    <link rel="stylesheet" href="./css/pogodiGrad.css"></link>
+    <link rel="stylesheet" href="./css/pogodiZastavu.css"></link>
+    <link rel="stylesheet" href="./css/zavrsni.css"></link>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <script defer src="./js/controler.js" type="module"></script>
+    <title>Country geek</title>
+  </head>
+  <body>
+    <div class="pocetniEkran grid">
+      <h1>COUNTRY GEEK</h1>
+      <div class="kutija--pocetak--igre">
+        <div class="pocni-igru-div pi">
+          <ion-icon class="pocetak-ikona" name="dice-outline"></ion-icon>
+          <button class="pocetak--igre">ZAPOČNI IGRU</button>
+        </div>
+
+        <div class="zastave-igra-div pi">
+          <ion-icon class="pocetak-ikona" name="flag-outline"></ion-icon>
+          <button class="pocetak--igre pocni-igru">POGODI ZASTAVE</button>
+        </div>
+
+        <div class="glgrad-igra-div pi">
+          <ion-icon class="pocetak-ikona" name="business-outline"></ion-icon>
+          <button class="pocetak--igre pocni-igru ">POGODI GLAVNI GRAD</button>
+        </div>
+
+        <div class="izadji-div pi">
+          <ion-icon class="pocetak-ikona" name="close-outline"></ion-icon>
+          <button class="pocetak--igre pocni-igru">NAZAD</button>
+        </div>
+      </div> 
+    </div>
+    <div class="pogodiGlavniGrad grid">
+       
+      <div class="vracanje-nazad">
+        <ion-icon  class="dugme-vracanje-nazad" name="return-up-back-outline"></ion-icon>
+        <p>Vrati se nazad</p>
+      </div>
+      <header>
+        <div class="main-header">
+          <h2 class="nazivTrenutneDrzave">Srbija</h2>
+          <div class="drzave-slicice">
+            <img class="slicica-h 1"/>
+            <img class="slicica-h 2"/>
+            <img class="slicica-h 3"/>
+            <img class="slicica-h 4"/>
+            <img class="slicica-h 5"/>
+            <img class="slicica-h 6"/>
+            <img class="slicica-h 7"/>
+            <img class="slicica-h 8"/>
+            <img class="slicica-h 9"/>
+            <img class="slicica-h 10"/>
+          </div>
+      </div>
+      <div class="zavrsiSve z">
+        <ion-icon class="dugmeZavrsi" name="checkmark-done-outline"></ion-icon>
+          <h3>ZAVRSI</h3>
+      </div>
+      </header>
+      <img src="zastava.png" class="zastava"/>
+      <div class="ponudjeniOdgovori grid">
+        <button class="opcija">Beograd</button>
+        <button class="opcija">Novi Sad</button>
+        <button class="opcija">Pancevo</button>
+      </div>
+      <div class="podnozje grid">
+        <ion-icon class="lijevo" name="arrow-back-outline"></ion-icon>
+        <div class="trenutnaDrzava" ><h2 class="trenutnaDrzavaPoRedu">1/10</h2></div>     
+        <ion-icon class="desno"name="arrow-forward-outline"></ion-icon>
+        <div class="vrijemeGradovi">
+          <svg class="sat" xmlns="http://www.w3.org/2000/svg" fill="#e5e5e5" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#e5e5e5" stroke-miterlimit="10" stroke-width="16"></circle><polyline points="128 72 128 128 184 128" fill="none" stroke="#e5e5e5" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+          <h2 class="vrijeme minute igt">00:00</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="pogodiZastavu">
+      <div class="sidebar">
+        <img class="slicica 1"/>
+        <img class="slicica 2"/>
+        <img class="slicica 3"/>
+        <img class="slicica 4"/>
+        <img class="slicica 5"/>
+        <img class="slicica 6"/>
+        <img class="slicica 7"/>
+        <img class="slicica 8"/>
+        <img class="slicica 9"/>
+        <img class="slicica 10"/>
+      </div>
+      <div class="vracanje-nazad">
+        <ion-icon  class="dugme-vracanje-nazad" name="return-up-back-outline"></ion-icon>
+        <p>Vrati se nazad</p>
+      </div>
+      <img class="zastava2"/>
+      <div class="unosDrzave">
+        <div class="obrisi">
+          <div>
+            <h6 class="obrisi-tekst">OBRISI</h6>
+            <div class="zavjesa"></div>
+            <ion-icon class="x-ikona" name="close-outline"></ion-icon>
+          </div>
+        </div>
+        <input placeholder="Unesi ime drzave" class="unesena-drzava"/>
+        <div class="potvrdi">
+          <div>
+            <h6 class="potvrdi-tekst">POTVRDI</h6>
+            <div class="zavjesa"></div>
+            <ion-icon class="strihir-ikona"name="checkmark-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="podnozjeZastave">
+        <div class="vrijemeZastave">
+          <ion-icon class="satZastave" name="time-outline"></ion-icon>
+          <p class="minuteZastave igt">00:00</p>
+        </div>
+        <div class="pomjeranje">
+          <ion-icon class="lijevoZastave" name="arrow-back-outline"></ion-icon>
+          <div class="trenutnaDrzavaPoReduZastave" ><h2>1/10</h2></div>     
+          <ion-icon class="desnoZastave"name="arrow-forward-outline"></ion-icon>
+        </div>
+        <div class="zavrsiSve">
+        <ion-icon class="dugmeZavrsi" name="checkmark-done-outline"></ion-icon>
+          <h3>ZAVRSI</h3>
+        </div>
+        <div class="tooltip">Pritisni ovde kada sve zavrsis</div>
+      </div>
+    </div>
+    <div class="zavrsni-ekran">
+        <h2>Cestitke, ovo je tvoj rezultat</h2>
+        <div class="tacni-odgovori">
+          <ion-icon class="ikona" name="checkmark-outline"></ion-icon>
+          <h4>4 od 10</h4>
+        </div>
+        <div class="zav-vrijeme">
+          <svg class="sat" xmlns="http://www.w3.org/2000/svg" fill="#e5e5e5" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="96" fill="none" stroke="#e5e5e5" stroke-miterlimit="10" stroke-width="16"></circle><polyline points="128 72 128 128 184 128" fill="none" stroke="#e5e5e5" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline></svg>
+          <h4>1:32</h4>
+        </div>
+        <div class="nazad-na-pocetni">
+          <ion-icon class="dugme-vracanje-nazad  zav-nazad" name="return-up-back-outline"></ion-icon>
+          <h4>Vrati se nazad</h4>
+        </div>
+        
+        <div class="ponovi-igru">
+          <ion-icon class="dugme-ponovi-igru" name="refresh-outline"></ion-icon>
+          <h4>Igraj ponovo</h4>
+        </div>
+      </div>
+  </body>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
