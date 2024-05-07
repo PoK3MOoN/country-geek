@@ -1,0 +1,223 @@
+* {
+  color: #e5e5e5;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+}
+
+.pogodiGlavniGrad {
+  width: 50rem;
+  grid-template-rows: 1rem 4rem 12rem 4rem;
+  grid-template-columns: 40% 60%;
+  row-gap: 2rem;
+}
+
+.pogodiGlavniGrad .vracanje-nazad {
+  grid-column: 1 / -1;
+  transform: translateX(-.5rem);
+}
+
+.ucitavanje {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header {
+  width: 100%;
+  background-color: #fa5252;
+  border-radius: 11px;
+  grid-column: 1 / -1;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-header {
+  flex-direction: column;
+  display: flex;
+  position: relative;
+}
+
+.slicica-h {
+  height: 1.8rem;
+  width: 2.6rem;
+  background-size: 2.6rem 1.8rem;
+  border-radius: 11%;
+}
+
+.drzave {
+  gap: .8rem;
+  display: flex;
+}
+
+.imeDrzave {
+  margin: auto;
+}
+
+.drzave-slicice {
+  filter: grayscale(.8);
+  opacity: .3;
+  gap: .2rem;
+  transition: all .3s ease-in-out;
+  display: flex;
+  transform: translateY(120%);
+}
+
+.z {
+  width: 5.5rem;
+  position: absolute;
+  right: 2.3rem;
+}
+
+.v {
+  width: 18rem;
+  position: absolute;
+  left: 0;
+}
+
+.main-header h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -67%);
+}
+
+.drzave-slicice:before {
+  content: "";
+  width: 100%;
+  height: 180%;
+  position: absolute;
+}
+
+.drzave-slicice:hover {
+  filter: grayscale(0);
+  opacity: 1;
+  height: 100%;
+  transform: translateY(0%);
+}
+
+.ponudjeniOdgovori {
+  border-radius: 0 11px;
+  grid-column: 2;
+  row-gap: .2rem;
+  overflow: hidden;
+}
+
+.ponudjeniOdgovori button {
+  text-align: left;
+  background-color: #fa5252;
+  border: none;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+  transition: all .2s ease-in;
+}
+
+.ponudjeniOdgovori button:hover {
+  cursor: pointer;
+  text-align: left;
+  background-color: #f03e3e;
+  border: none;
+  padding-left: 2rem;
+  font-size: 1.5rem;
+}
+
+.ponudjeniOdgovori h2 {
+  padding-left: 2rem;
+}
+
+.podnozje {
+  width: 100%;
+  background-color: #fa5252;
+  border-radius: 11px;
+  grid-column: 1 / -1;
+  align-items: center;
+  display: flex;
+}
+
+.lijevo {
+  height: 2rem;
+  margin-left: 12rem;
+  transition: all .2s ease-in;
+}
+
+.desno {
+  height: 2rem;
+  transition: all .2s ease-in;
+}
+
+.lijevo:hover, .desno:hover {
+  color: #adb5bd;
+}
+
+.zastava2 {
+  height: 18rem;
+}
+
+.satZastave {
+  height: 2rem;
+  width: 2rem;
+}
+
+.vrijemeZastave {
+  width: 18rem;
+  justify-content: center;
+  align-items: center;
+  gap: .2rem;
+  display: flex;
+}
+
+.minuteZastave {
+  width: 4rem;
+  font-size: 1.3rem;
+}
+
+.podnozjeZastave {
+  height: 4rem;
+  align-items: center;
+  display: flex;
+}
+
+.lijevo, .desno, .sat {
+  width: 2rem;
+  height: 2rem;
+}
+
+.lijevoZastave, .desnoZastave, .trenutnaDrzavaPoReduZastave {
+  height: 2rem;
+  width: 2rem;
+  font-size: 1rem;
+}
+
+.lijevoZastave:hover, .desnoZastave:hover {
+  cursor: pointer;
+  color: #adb5bd;
+}
+
+.trenutnaDrzavaPoReduZastave {
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 .5rem;
+  display: flex;
+}
+
+.pomjeranje {
+  align-items: center;
+  display: flex;
+}
+
+.trenutnaDrzava {
+  margin: 0 1.5rem;
+}
+
+.trenutnaDrzava h2 {
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=index.c563acda.css.map */

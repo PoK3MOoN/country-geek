@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-weight: 400;
+  color: #e5e5e5;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+.vracanje-nazad {
+  display: flex;
+  cursor: pointer;
+  grid-column: 1;
+  padding: 0.4rem 1.6rem;
+  border-radius: 11px;
+  align-self: center;
+  justify-self: center;
+  margin: 2vh;
+  transition: all 0.5s;
+}
+.dugme-vracanje-nazad {
+  height: 1.6rem;
+  width: 1.6rem;
+  transition: all 0.3s;
+}
+.vracanje-nazad p {
+  align-self: center;
+  margin-left: 0.4rem;
+}
+
+.vracanje-nazad:hover .dugme-vracanje-nazad {
+  transform: translateX(-33%);
+}
+
+.pogodiZastavu {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+  width: 28rem;
+  margin-bottom: 3.2rem;
+  column-gap: 0.4rem;
+}
+.sidebar {
+  height: 100%;
+  z-index: 0;
+  grid-column: 2;
+  grid-row: 2/5;
+  background-color: #fa5252;
+  padding: 0.4rem;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  opacity: 20%;
+  transform: translateX(-80%);
+  transition: all 0.3s ease-out;
+}
+.sidebar:hover {
+  transform: translateX(0);
+  opacity: 100%;
+  /* z-index: 2; */
+}
+.slicica {
+  height: 2.6em;
+  width: 2.6rem;
+  background-size: 2.6rem 2.6em;
+  border-radius: 11%;
+}
+
+.pogodiZastavu img {
+  border-radius: 11px;
+}
+.unosDrzave {
+  grid-column: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 1.2rem 0;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.potvrdi ion-icon,
+.obrisi ion-icon {
+  width: 2rem;
+  height: 2rem;
+  padding: 1.2rem 1.2rem 0 1.2rem;
+  /* background-color: #fa5252; */
+  transition: all 0.3s;
+}
+
+.potvrdi div,
+.obrisi div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem "1.2rem";
+  background-color: #fa5252;
+  transition: all 0.3s;
+}
+
+.zavjesa {
+  position: absolute !important;
+  top: 0%;
+  transform: translate(10%, 180%);
+  height: 1rem !important;
+  width: 4rem !important;
+  transition: all 0.3s;
+}
+
+.potvrdi:hover ion-icon,
+.obrisi:hover ion-icon {
+  transform: translateY(-8%);
+}
+
+.potvrdi:hover .zavjesa,
+.obrisi:hover .zavjesa {
+  transform: translate(10%, 150%);
+}
+.obrisi-tekst {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  transform: translate(53%, 220%);
+  transition: all 0.3s;
+}
+.potvrdi-tekst {
+  position: absolute;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  transform: translate(25%, 220%);
+  transition: all 0.3s;
+}
+
+.obrisi:hover .obrisi-tekst {
+  visibility: visible;
+  height: 1rem;
+  transform: translate(53%, 270%);
+}
+.potvrdi:hover .potvrdi-tekst {
+  visibility: visible;
+  height: 1rem;
+  transform: translate(25%, 270%);
+}
+.vrijemeGradovi {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 8rem;
+}
+input {
+  height: 100%;
+  width: 70%;
+
+  background-color: #fa5252;
+  text-align: center;
+  padding: 1.25rem 0;
+  border: none;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+}
+input:focus {
+  outline: none;
+  box-shadow: inset 0 0 0 1px #eeeeee;
+}
+
+::placeholder {
+  color: #e5e5e5;
+}
+.podnozjeZastave * {
+  margin: 0;
+}
+.podnozjeZastave {
+  grid-column: 1;
+  position: relative;
+  overflow: hidden;
+
+  grid-template-columns: 2fr 1fr 2fr;
+
+  border-radius: 11px;
+  background-color: #fa5252;
+}
+.podnozjeZastave .lijevo {
+  justify-self: end;
+  align-self: center;
+
+  grid-row: 1;
+  grid-column: 1;
+}
+.podnozjeZastave .desno {
+  justify-self: start;
+  align-self: center;
+
+  grid-row: 1;
+  grid-column: 3;
+}
+.podnozjeZastave .drzavaPoRedu {
+  text-align: center;
+
+  grid-row: 1;
+  grid-column: 2;
+}
+.dugmeZavrsi {
+  width: 2rem;
+  height: 2rem;
+  justify-self: center;
+  padding-right: 4rem;
+  transform: translateX(3rem);
+  align-self: center;
+  background-color: #fa5252;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+}
+
+.zavrsiSve,
+.lijevo,
+.desno,
+.potvrdi ion-icon,
+.obrisi ion-icon,
+img {
+  cursor: pointer;
+}
+
+.zavrsiSve {
+  width: 70%;
+  height: 100%;
+  justify-self: flex-end;
+  align-self: center;
+
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.zavrsiSve:hover .dugmeZavrsi {
+  transform: translateX(3.6rem);
+}
+
+h3 {
+  transform: translateX(2rem);
+  visibility: hidden;
+  position: absolute;
+  grid-row: 1;
+  grid-column: 3;
+  width: 0;
+  transition: all 0.3s ease-out;
+}
+.zavrsiSve:hover h3 {
+  transform: translateX(-1.6rem);
+  visibility: visible;
+  width: 4rem;
+}
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  right: -4.5rem;
+  bottom: 20px;
+  z-index: 1;
+  font-size: 0.4rem;
+  text-transform: uppercase;
+  padding: 0.2rem;
+  background: #f03e3e;
+  border-radius: 11px;
+  border: 1px solid rgba(0, 0, 0, 0.233);
+}
+.vrijeme {
+  justify-self: center;
+  align-self: center;
+  transform: translateX(-1.4rem);
+  display: flex;
+
+  grid-row: 1;
+  grid-column: 1;
+}
+.vrijeme ion-icon {
+  width: 2rem;
+  height: 2rem;
+}
+.vrijeme p {
+  color: #e5e5e5;
+  align-self: center;
+  margin-left: 0.2rem;
+}
